@@ -1,0 +1,96 @@
+header {
+    background: url('../img/start.jpg') center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-attachment: fixed;
+    nav {
+        position: absolute;
+        width: 100%;
+        padding: 2rem;
+        background-image: url('../img/dott.png');
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            li {
+                a {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    padding: 1.6rem;
+                    text-align: center;
+                    font-size: 2.4rem;
+                    letter-spacing: .5rem;
+                    color: rgba(245, 245, 245, 0.466);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    transition: .5s;
+
+                    &:hover {
+                        background-color:  rgba(139, 0, 0, 0.39);
+                        color: whitesmoke;
+            
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 1.2rem;
+                        left: 1.2rem;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        border: .3rem solid rgba(139, 0, 0, 0.39);
+                        border-width: 0 0 .3rem .3rem;
+                        transition: .5s;
+                        opacity: 0;
+                    }
+                    &:hover::before{
+                        bottom: -.8rem;
+                        left: -.8rem;
+                        opacity: 1;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 1.2rem;
+                        right: 1.2rem;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        border: .3rem solid darkred;
+                        border-width: 0 0 .3rem .3rem;
+                        transition: .5s;
+                        opacity: 1;
+                        border: .3rem solid darkred;
+                        border-width: .3rem .3rem 0 0;
+                        opacity: 0;
+
+                    }
+
+                    &:hover::after {
+                        top: -.8rem;
+                        right: -.8rem;
+                        opacity: 1;
+                }
+                
+                }
+            } 
+        }
+    }
+    h1 {
+        position: absolute;
+        // margin: 0 auto;
+        // left: 0;
+        // right: 0;
+        width: 60%;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 3.5rem;
+        border: .4rem solid $border-color-h1;
+        border-radius: .8rem;
+        background-image: url(../img/dott.png);
+        text-align: center;
+        color: $text-header-h1;
+        font-size: 6.5rem;
+        letter-spacing: .5rem;
+    }
+}
